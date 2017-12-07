@@ -12,6 +12,7 @@
     <modules>
         <module>kk-eureka-center</module>
         <module>kk-config-center</module>
+        <module>kk-service</module>
     </modules>
 
     <parent>

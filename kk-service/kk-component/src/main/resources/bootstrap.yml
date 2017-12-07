@@ -1,0 +1,23 @@
+server:
+  port: 9080
+
+spring:
+  application:
+    name: kk-component
+  cloud:
+    config:
+      discovery:
+        service-id: kk-config-center
+        enabled: true
+      profile: dev
+      label: master
+      name: kk-component
+eureka:
+  instance:
+    status-page-url-path: /info
+    health-check-url-path: /health
+  client:
+    service-url:
+     defaultZone: http://localhost:1080/eureka/
+
+

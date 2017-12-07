@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kk.springcloud.mapper.WxComponentMapper">
+
+  <resultMap id="wxComponentMap" type="com.kk.springcloud.model.WxComponent">
+    <id property="id" column="id" jdbcType="INTEGER"></id>
+    <result property="appName" column="app_name" jdbcType="VARCHAR"></result>
+    <result property="componentAppId" column="component_app_id" jdbcType="VARCHAR"></result>
+    <result property="componentAppSecret" column="component_app_secret" jdbcType="VARCHAR"></result>
+    <result property="encodingAesKey" column="encoding_aes_key" jdbcType="VARCHAR"></result>
+    <result property="encodingToken" column="encoding_token" jdbcType="VARCHAR"></result>
+    <result property="componentVerifyTicket" column="component_verify_ticket" jdbcType="VARCHAR"></result>
+    <result property="componentAccessToken" column="component_access_token" jdbcType="VARCHAR"></result>
+    <result property="preAuthCode" column="pre_auth_code" jdbcType="VARCHAR"></result>
+    <result property="componentLoginPage" column="component_login_page" jdbcType="VARCHAR"></result>
+    <result property="componentHome" column="component_home" jdbcType="VARCHAR"></result>
+    <result property="callbackUrl" column="callback_url" jdbcType="VARCHAR"></result>
+    <result property="createAt" column="create_at" jdbcType="VARCHAR"></result>
+    <result property="opBy" column="op_by" jdbcType="VARCHAR"></result>
+    <result property="opAt" column="op_at" jdbcType="VARCHAR"></result>
+    <result property="delFlag" column="del_flag" jdbcType="INTEGER"></result>
+  </resultMap>
+
+  <select id="findAll" resultMap="wxComponentMap">
+    select * from wx_component
+  </select>
+</mapper>
